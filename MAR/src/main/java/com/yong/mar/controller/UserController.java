@@ -11,16 +11,18 @@ import org.springframework.ui.ModelMap;
 @Controller
 public class UserController {
 
-    @RequestMapping(value = "/user",method = RequestMethod.GET)
-    public ModelAndView user(){
-        return new ModelAndView("user","command",new User());
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public ModelAndView user() {
+        return new ModelAndView("user", "command", new User());
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("SpringWeb")User user,
+    public String addUser(@ModelAttribute("SpringWeb") User user,
                           ModelMap model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("password", user.getPassword());
+        model.addAttribute("address", user.getAddress());
+        model.addAttribute("receivePaper", user.isReceivePaper());
 
         return "userList";
     }

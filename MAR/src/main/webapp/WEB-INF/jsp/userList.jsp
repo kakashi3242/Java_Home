@@ -1,5 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
     <title>Spring MVC表单处理之-密码</title>
@@ -15,6 +15,14 @@
     <tr>
         <td>密码：</td>
         <td>${password}</td>
+    </tr>
+    <tr>
+        <td>地址：</td>
+        <td>${address}</td>
+    </tr>
+    <tr>
+        <td>是否订阅新闻</td>
+        <td>${receivePaper}</td>
     </tr>
 </table>
 </body>

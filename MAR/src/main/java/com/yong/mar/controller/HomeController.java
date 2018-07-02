@@ -14,7 +14,7 @@ public class HomeController {
 
         modelMap.addAttribute("message","Hello Spring !");
 
-        return "redirect:/pages/helloword.html";
+        return "redirect:hello";
 
     }
 
